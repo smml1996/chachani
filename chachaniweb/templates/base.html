@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+ <html>
+
+   <head>
+     <!--Import Google Icon Font-->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!--Import materialize.css-->
+
+     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+
+   <body>
+     <div class="logo-div">
+       <img id ="logo" class="responsive-img" src="{% static 'img/logo.png' %}">
+     </div>
+     <nav>
+        <div class="nav-wrapper  light-green darken-4 ">
+          <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+          <ul id="inicio_ul" class="left hide-on-med-and-down">
+            <li><a href="">INICIO</a></li>
+          </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down ">
+              <li><a href="">NOSOTROS</a></li>
+              <li><a href="">CAMPOS DE ACCIÓN</a></li>
+              <li><a href="">SERVICIOS</a></li>
+              <li><a href="">PRODUCTOS</a></li>
+              <li><a href="">CONTACTO</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="">NOSOTROS</a></li>
+              <li><a href="">CAMPOS DE ACCIÓN</a></li>
+              <li><a href="">SERVICIOS</a></li>
+              <li><a href="">PRODUCTOS</a></li>
+              <li><a href="">CONTACTO</a></li>
+            </ul>
+        </div>
+    </nav>
+     {% block content %}
+     {% endblock %}
+     <!--Import jQuery before materialize.js-->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script type="text/javascript" src=" {% static 'js/materialize.min.js' %}"></script>
+     <script type="text/javascript" src=" {% static 'js/base.js' %}"></script>
+
+   </body>
+ </html>
