@@ -1,9 +1,16 @@
 #logo{
-  width: 10vw;
+  max-height: 25vh;
   margin-left: 3vw;
   margin-top: 0.5em;
 }
 
+@media only screen and (max-width: 980px) {
+    #logo {
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+    }
+}
 #inicio_ul{
   margin-left:5vw;
 }
