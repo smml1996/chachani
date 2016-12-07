@@ -14,15 +14,17 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    </head>
 
-   <body>
+   <body >
+     <div id="container">
+    <div id="content">
      <div class="logo-div">
-       <img id ="logo" class="responsive-img" src="{% static 'img/logo.png' %}">
-     </div>
+       <img href="{% url 'index' %}"id ="logo" class="responsive-img" src="{% static 'img/logo.png' %}">
+     </div1>
      <nav>
         <div class="nav-wrapper  light-green darken-4 ">
           <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
           <ul id="inicio_ul" class="left hide-on-med-and-down">
-            <li><a href="">INICIO</a></li>
+            <li><a href="{% url 'index' %}">INICIO</a></li>
           </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down ">
               <li><a href="">NOSOTROS</a></li>
@@ -31,21 +33,37 @@
               <li><a href="">PRODUCTOS</a></li>
               <li><a href="">CONTACTO</a></li>
             </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li><a href="">NOSOTROS</a></li>
-              <li><a href="">CAMPOS DE ACCIÓN</a></li>
-              <li><a href="">SERVICIOS</a></li>
-              <li><a href="">PRODUCTOS</a></li>
-              <li><a href="">CONTACTO</a></li>
+            <ul class="side-nav light-green darken-3" id="mobile-demo">
+              <li class=" "><a class="white-text" href="">NOSOTROS</a></li>
+              <li><a class="white-text" href="">CAMPOS DE ACCIÓN</a></li>
+              <li><a class="white-text" href="">SERVICIOS</a></li>
+              <li><a class="white-text" href="">PRODUCTOS</a></li>
+              <li><a class=" white-text " href="">CONTACTO</a></li>
             </ul>
         </div>
     </nav>
+
      {% block content %}
      {% endblock %}
+   </div>
+ </div>
+   <div id="footer">
+     <footer class="page-footer  light-green darken-4" style="padding-top: 5px;">
+        <div class="footer-copyright">
+          <div id="copyrighttxt" class="right">
+          © 2014 Copyright Chachani
+          </div>
+        </div>
+      </footer>
+  </div>
      <!--Import jQuery before materialize.js-->
-     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-     <script type="text/javascript" src=" {% static 'js/materialize.min.js' %}"></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+     <script type="text/javascript" src=" {% static 'js/materialize.js' %}"></script>
      <script type="text/javascript" src=" {% static 'js/base.js' %}"></script>
-
+     <script>
+      $(document).ready(function(){
+                        $('.slider').slider({full_width: true, indicators:false});
+      });
+      </script>
    </body>
  </html>
