@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
- <html>
+ <html class="no-js">
 
    <head>
      <!--Import Google Icon Font-->
@@ -11,6 +11,11 @@
      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
      <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
      <!--Let browser know website is optimized for mobile-->
+     <!-- timeline dependencies -->
+     <link rel="stylesheet" href="{% static 'css/reset.css' %}"> <!-- CSS reset -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Resource style -->
+     <!-- -->
+     <script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    </head>
 
@@ -19,7 +24,7 @@
     <div id="content">
      <div class="logo-div">
        <img href="{% url 'index' %}"id ="logo" class="responsive-img" src="{% static 'img/logo.png' %}">
-     </div1>
+     </div>
      <nav>
         <div class="nav-wrapper  light-green darken-4 ">
           <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
@@ -27,14 +32,14 @@
             <li><a href="{% url 'index' %}">INICIO</a></li>
           </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down ">
-              <li><a href="">NOSOTROS</a></li>
+              <li><a href=" {% url 'nosotros' %}">NOSOTROS</a></li>
               <li><a href="">CAMPOS DE ACCIÓN</a></li>
               <li><a href="">SERVICIOS</a></li>
               <li><a href="">PRODUCTOS</a></li>
               <li><a href="">CONTACTO</a></li>
             </ul>
             <ul class="side-nav light-green darken-3" id="mobile-demo">
-              <li class=" "><a class="white-text" href="">NOSOTROS</a></li>
+              <li class=" white-text"><a class="white-text" href="{% url 'nosotros' %}">NOSOTROS</a></li>
               <li><a class="white-text" href="">CAMPOS DE ACCIÓN</a></li>
               <li><a class="white-text" href="">SERVICIOS</a></li>
               <li><a class="white-text" href="">PRODUCTOS</a></li>
@@ -57,7 +62,9 @@
       </footer>
   </div>
      <!--Import jQuery before materialize.js-->
-     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+     <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+     <script src="{% static 'js/jquery.mobile.custom.min.js' %}"></script>
+     <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
      <script type="text/javascript" src=" {% static 'js/materialize.js' %}"></script>
      <script type="text/javascript" src=" {% static 'js/base.js' %}"></script>
      <script>

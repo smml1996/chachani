@@ -5,3 +5,8 @@ def index(request):
     template = loader.get_template('index.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+def nosotros(request):
+    template = loader.get_template('nosotros.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
