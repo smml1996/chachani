@@ -2146,7 +2146,7 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: "Roboto",sans-serif !important;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -2873,8 +2873,8 @@ footer.page-footer {
 
 footer.page-footer .footer-copyright {
   overflow: hidden;
-  height: 50px;
-  line-height: 50px;
+  height: 50px !important;
+  line-height: 50px !important;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(51, 51, 51, 0.08);
 }
@@ -4233,7 +4233,7 @@ nav .input-field label.active {
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   src: url("../fonts/roboto/Roboto-Bold.eot");
   src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -4244,8 +4244,8 @@ a {
 }
 
 html {
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.5 !important;
+  font-family: "Roboto", sans-serif !important;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -4258,59 +4258,59 @@ html {
 
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 14.5px;
+    font-size: 14.5px !important;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  line-height: 1.1;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  font-weight: inherit;
+  font-weight: inherit !important;
 }
 
 h1 {
-  font-size: 4.2rem;
-  line-height: 110%;
+  font-size: 4.2rem !important;
+  line-height: 110% !important;
   margin: 2.1rem 0 1.68rem 0;
 }
 
 h2 {
-  font-size: 3.56rem;
-  line-height: 110%;
+  font-size: 3.56rem !important;
+  line-height: 110% !important;
   margin: 1.78rem 0 1.424rem 0;
 }
 
 h3 {
-  font-size: 2.92rem;
-  line-height: 110%;
+  font-size: 2.92rem !important;
+  line-height: 110% !important;
   margin: 1.46rem 0 1.168rem 0;
 }
 
 h4 {
-  font-size: 2.28rem;
-  line-height: 110%;
-  margin: 1.14rem 0 0.912rem 0;
+  font-size: 2.28rem !important;
+  line-height: 110% !important;
+  margin: 1.14rem 0 0.912rem 0 !important;
 }
 
 h5 {
-  font-size: 1.64rem;
-  line-height: 110%;
-  margin: 0.82rem 0 0.656rem 0;
+  font-size: 1.64rem !important;
+  line-height: 110% !important;
+  margin: 0.82rem 0 0.656rem 0 !important;
 }
 
 h6 {
-  font-size: 1rem;
-  line-height: 110%;
-  margin: 0.5rem 0 0.4rem 0;
+  font-size: 1rem !important;
+  line-height: 110% !important;
+  margin: 0.5rem 0 0.4rem 0 !important;
 }
 
 em {
@@ -4326,7 +4326,7 @@ small {
 }
 
 .light, footer.page-footer .footer-copyright {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 .thin {
@@ -4339,121 +4339,121 @@ small {
 
 @media only screen and (min-width: 360px) {
   .flow-text {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 }
 
 @media only screen and (min-width: 390px) {
   .flow-text {
-    font-size: 1.224rem;
+    font-size: 1.224rem !important;
   }
 }
 
 @media only screen and (min-width: 420px) {
   .flow-text {
-    font-size: 1.248rem;
+    font-size: 1.248rem !important;
   }
 }
 
 @media only screen and (min-width: 450px) {
   .flow-text {
-    font-size: 1.272rem;
+    font-size: 1.272rem !important;
   }
 }
 
 @media only screen and (min-width: 480px) {
   .flow-text {
-    font-size: 1.296rem;
+    font-size: 1.296rem !important;
   }
 }
 
 @media only screen and (min-width: 510px) {
   .flow-text {
-    font-size: 1.32rem;
+    font-size: 1.32rem !important;
   }
 }
 
 @media only screen and (min-width: 540px) {
   .flow-text {
-    font-size: 1.344rem;
+    font-size: 1.344rem !important;
   }
 }
 
 @media only screen and (min-width: 570px) {
   .flow-text {
-    font-size: 1.368rem;
+    font-size: 1.368rem !important;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .flow-text {
-    font-size: 1.392rem;
+    font-size: 1.392rem !important;
   }
 }
 
 @media only screen and (min-width: 630px) {
   .flow-text {
-    font-size: 1.416rem;
+    font-size: 1.416rem !important;
   }
 }
 
 @media only screen and (min-width: 660px) {
   .flow-text {
-    font-size: 1.44rem;
+    font-size: 1.44rem !important;
   }
 }
 
 @media only screen and (min-width: 690px) {
   .flow-text {
-    font-size: 1.464rem;
+    font-size: 1.464rem !important;
   }
 }
 
 @media only screen and (min-width: 720px) {
   .flow-text {
-    font-size: 1.488rem;
+    font-size: 1.488rem !important;
   }
 }
 
 @media only screen and (min-width: 750px) {
   .flow-text {
-    font-size: 1.512rem;
+    font-size: 1.512rem !important;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .flow-text {
-    font-size: 1.536rem;
+    font-size: 1.536rem !important;
   }
 }
 
 @media only screen and (min-width: 810px) {
   .flow-text {
-    font-size: 1.56rem;
+    font-size: 1.56rem !important;
   }
 }
 
 @media only screen and (min-width: 840px) {
   .flow-text {
-    font-size: 1.584rem;
+    font-size: 1.584rem !important;
   }
 }
 
 @media only screen and (min-width: 870px) {
   .flow-text {
-    font-size: 1.608rem;
+    font-size: 1.608rem !important;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .flow-text {
-    font-size: 1.632rem;
+    font-size: 1.632rem !important;
   }
 }
 
 @media only screen and (min-width: 930px) {
   .flow-text {
-    font-size: 1.656rem;
+    font-size: 1.656rem !important;
   }
 }
 

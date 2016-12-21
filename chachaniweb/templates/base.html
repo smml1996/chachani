@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 {% load staticfiles %}
- <html class="no-js">
+ <html>
 
    <head>
      <!--Import Google Icon Font-->
      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
      <!--Import materialize.css-->
-
+     <!-- timeline dependencies -->
+     <link rel="stylesheet" href="{% static 'css/reset.css' %}"> <!-- CSS reset -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
      <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
      <!--Let browser know website is optimized for mobile-->
-     <!-- timeline dependencies -->
-     <link rel="stylesheet" href="{% static 'css/reset.css' %}"> <!-- CSS reset -->
-     <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Resource style -->
-     <!-- -->
-     <script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    </head>
 
@@ -36,14 +33,14 @@
               <li><a href="">CAMPOS DE ACCIÓN</a></li>
               <li><a href="">SERVICIOS</a></li>
               <li><a href="">PRODUCTOS</a></li>
-              <li><a href="">CONTACTO</a></li>
+              <li><a href="  {% url 'contacto' %}">CONTACTO</a></li>
             </ul>
             <ul class="side-nav light-green darken-3" id="mobile-demo">
               <li class=" white-text"><a class="white-text" href="{% url 'nosotros' %}">NOSOTROS</a></li>
               <li><a class="white-text" href="">CAMPOS DE ACCIÓN</a></li>
               <li><a class="white-text" href="">SERVICIOS</a></li>
               <li><a class="white-text" href="">PRODUCTOS</a></li>
-              <li><a class=" white-text " href="">CONTACTO</a></li>
+              <li><a class=" white-text " href=" {% url 'contacto' %}">CONTACTO</a></li>
             </ul>
         </div>
     </nav>
@@ -55,22 +52,92 @@
    <div id="footer">
      <footer class="page-footer  light-green darken-4" style="padding-top: 5px;">
         <div class="footer-copyright">
-          <div id="copyrighttxt" class="right">
-          © 2014 Copyright Chachani
+          <div style="font-size: initial;" id="copyrighttxt" class="right">
+          © 2016 Copyright Chachani
           </div>
         </div>
       </footer>
   </div>
+     <script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
      <!--Import jQuery before materialize.js-->
      <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
      <script src="{% static 'js/jquery.mobile.custom.min.js' %}"></script>
      <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
-     <script type="text/javascript" src=" {% static 'js/materialize.js' %}"></script>
-     <script type="text/javascript" src=" {% static 'js/base.js' %}"></script>
+     <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+     <script type="text/javascript" src="{% static 'js/datos-provincias.js' %}"></script>
      <script>
       $(document).ready(function(){
-                        $('.slider').slider({full_width: true, indicators:false});
+          $('.slider').slider({full_width: true, indicators:false});
+          $('select').material_select();
+
+
       });
+
+      jQuery(function($) {
+    var locations = {
+        'am': ['Bagua', 'Bongará','Chachapoyas', 'Condorcanqui','Luya',
+                'Rodríguez de Mendoza','Utcubamba'],
+        'an': ['Aija','Antonio Raymondi','Asunción','Bolognesi',
+                'Carhuaz','Carlos F. Fitzcarrald','Casma','Corongo','Huaraz',
+                'Huari','Huarmey','Huaylas','Marizcal Luzuriaga','Ocros',
+                'Pallasca','Pomapampa','Recuay','Santa','Sihuas','Yungay'],
+        'ap': ['Abancay','Andahuaylas','Chincheros','Antabamba',
+              'Aymaraes','Cotabambas','Grau'],
+        'ar': ['Arequipa','Camaná','Caraveli','Castilla','Caylloma',
+                'Condesuyos','Islay','La Unión'],
+        'ay': ['Huamanga','Cangallo','Huanca Sancos','Huanta','La Mar',
+                'Lucanas','Parinacochas','Paúcar del Sara Sara','Sucre',
+                'Victor Fajardo','Vilcas Huamán'],
+        'caj': ['San Ignacio','Jaen','Cutervo','Chota','Santa Cruz','Hualgayoc',
+                'Celendin','San Pablo','San Miguel','Contumaza','Cajamarca',
+                'Cajabamba','San Marcos'],
+        'cal': [''],
+        'cus': ['Acomayo','Anta','Calca','Canas','Canchis','Chumbivilcas',
+                'Cusco','Espinar','La Convención','Paruro', 'Paucartambo',
+                'Quispicanchis','Urubamba'
+                ],
+        'huanc': ['Tayacaja', 'Acobamba', 'Huaytará', 'Angaraes', 'Churcampa',
+                  'Castrovirreyna'],
+        'hua': ['Huanuco','Ambo','Dos de Mayo','Huaycabamba','Huamalies',
+                'Leoncio Prado','Marañon','Pachitea','Puerto Inca','Lauricocha',
+                'Yarowillca'],
+        'ica': ['Ica','Chincha','Nazca','Palpa','Pisco'],
+        'jun': ['Junín','Yauli','Jauja','Tarma','Chanchamayo','Concepción',
+                'Chupaca','Huancayo','Satipo'],
+        'lib': ['Chepen','Pacasmayo','Ascope','Otuzco','Trujillo','Julcan',
+                'Santiago de Chuco','Sanchez Carrión','Bolivar','Pataz'],
+        'lam': ['Lambayeque','Ferreñafe','Chiclayo'],
+        'lim':['Barranca','Lima','Cajatambo','Oyon','Huaura','Huaral','Canta',
+                'Huarochiri','Yauyos','Cañete'],
+        'lo': ['Maynas','Loreto','Ramón Castilla','Requena','Alto Amazonas',
+                'Datem del Marañón','Ucayali'],
+        'ma': ['Tahuamanu','Tambopata','Manu'],
+        'mo': ['General Sanchez Cerro','Mariscal Nieto','Ilo'],
+        'pa': ['Daniel A. Carrión', 'Oxampampa', 'Pasco'],
+        'pi': ['Talara','Paita','Sechura','Piura','Suliana','Morropón',
+              'Ayabaca','Huancabamba'],
+        'pu': ['Carabaya','Sandia','Melgar','Lampa','Azangaro',
+                'San Antonio de Putina','Huancané','Moho','El Collao','Puno',
+                'San Román','Chuquito','Yunguyo'],
+        'san': ['Moyobamba','Rioja','Lamas','San Martín','El Dorado','Picota',
+                'Bellavista','Huallaga','Mariscal Caceres','Tocache'],
+        'tac': ['Candarave','Tacna','Tarata','Jorge Basadre'],
+        'tum': ['tumbes','Contralmirante Villar','Zarumilla'],
+        'uc': ['Padre Abad','Coronel Portillo','Atalaya','Purus'],
+    }
+
+    var $provincia = $('#provincia');
+    $('#depart').change(function () {
+        var depart = $(this).val(), lcns = locations[depart] || [];
+
+        var html = $.map(lcns, function(lcn){
+            return '<option value="' + lcn + '">' + lcn + '</option>'
+        }).join('');
+        $provincia.html(html);
+          $('select').material_select();
+    });
+});
+
       </script>
    </body>
  </html>

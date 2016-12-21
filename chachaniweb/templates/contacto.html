@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row container contacto-form">
+  <form style="margin-top:10vh;" class="col s12">
+      <div class="input-field col s6">
+        <input placeholder="Placeholder" id="apellidos" type="text" class="validate">
+        <label for="apellidos">apellidos</label>
+      </div>
+      <div class="input-field col s6">
+        <input placeholder="Placeholder" id="nombre" type="text" class="validate">
+        <label for="nombre">Nombre</label>
+      </div>
+
+      <div class="input-field col s6">
+        <select id="depart" name="depart">
+         <option value="" disabled selected>Escoge un departamento</option>
+         <option value="am">Amazonas</option>
+         <option value="an">Ancash</option>
+         <option value="ap">Apurimac</option>
+         <option value="ar">Arequipa</option>
+         <option value="ay">Ayacucho</option>
+         <option value="caj">Cajamarca</option>
+         <option value="cal">Callao</option>
+         <option value="cus">Cusco</option>
+         <option value="huanc">Huancavelica</option>
+         <option value="hua">Huánuco</option>
+         <option value="ica">Ica</option>
+         <option value="jun">Junín</option>
+         <option value="lib">La Libertad</option>
+         <option value="lam">Lambayeque</option>
+         <option value="lim">Lima</option>
+         <option value="lo">Loreto</option>
+         <option value="ma">Madre de Dios</option>
+         <option value="mo">Moquegua</option>
+         <option value="pa">Pasco</option>
+         <option value="pi">Piura</option>
+         <option value="pu">Puno</option>
+         <option value="san">San Martín</option>
+         <option value="tac">Tacna</option>
+         <option value="tum">Tumbes</option>
+         <option value="uc">Ucayali</option>
+        </select>
+        <label>Departamento</label>
+      </div>
+      <div class="input-field col s6">
+        <select id="provincia" name="provincia">
+          <option value="" disabled selected>Selecciona tu provincia</option>
+        </select>
+        <label>provincia</label>
+      </div>
+      <div class="input-field col s6">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="Ingrese un correo válido">Email</label>
+      </div>
+      <div class="input-field col s6">
+          <input id="number" type="number" min="0" max="999999" class="validate">
+          <label for="number" data-error="Ingrese un número válido">número
+                    de proveedor</label>
+      </div>
+      <div class="input-field col s8 push-s2">
+          <textarea id="mensaje" class="materialize-textarea"></textarea>
+          <label for="Mensaje">Escribe aquí tu mensaje  </label>
+      </div>
+      <div style="margin-top:3em;" class="col s12">
+        <button class="btn waves-effect waves-light right green darken-1" type="submit" name="action">Enviar
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+  </form>
+</div>
+{% endblock content%}
