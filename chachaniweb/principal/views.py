@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.template import loader
 
 def index(request):
@@ -13,4 +13,8 @@ def nosotros(request):
 
 def contacto(request):
     template = loader.get_template('contacto.html')
+    return HttpResponse(template.render({},request))
+
+def error(request):
+    template = loader.get_template('404error.html');
     return HttpResponse(template.render({},request))

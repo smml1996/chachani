@@ -3,12 +3,17 @@
   margin-left: 3vw;
   margin-top: 0.5em;
 }
-
+#foto-chachani{
+  margin-top:4.5rem;
+}
 @media only screen and (max-width: 980px) {
     #logo {
         margin-left:auto;
         margin-right:auto;
         display:block;
+    }
+    #foto-chachani{
+      margin-top:0px;
     }
 }
 #inicio_ul{

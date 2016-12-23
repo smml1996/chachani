@@ -17,12 +17,32 @@
    </head>
 
    <body >
+     <ul id="dropdown1" class="dropdown-content light-green darken-2 ">
+         <li><a href="{% url 'innova' %}" class ="white-text">INNOVACIONES</a></li>
+         <li><a href="{% url 'libros' %}" class ="white-text">LIBROS</a></li>
+         <li><a href="{% url 'revistas' %}" class ="white-text">REVISTAS</a></li>
+         <li class="divider"></li>
+        <li ><a href="{% url 'establos' %}" class ="white-text">ESTABLOS LECHEROS</a></li>
+        <li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li>
+        <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
+        <li><a href="{% url 'alimento' %}" class ="white-text">ALIMENTO</a></li>
+        <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
+        <li><a href="{% url 'carne' %}" class ="white-text">GANADO DE CARNE</a></li>
+        <li><a href="{% url 'fertilizantes' %}" class ="white-text">FERTILIZANTES NATURALES</a></li>
+        <li class="divider"></li>
+        <li><a href="{% url 'lotes' %}" class ="white-text">LOTES DE TERRENO</a></li>
+        <li><a href="{% url 'cultivo' %}" class ="white-text">AREAS DE CULTIVO</a></li>
+      </ul>
      <div id="container">
     <div id="content">
      <div class="logo-div">
-       <img href="{% url 'index' %}"id ="logo" class="responsive-img" src="{% static 'img/logo.png' %}">
+       <a href="{% url 'index' %}">
+       <img id ="logo" class="responsive-img" src="{% static 'img/logo.png' %}">
+      </a>
      </div>
+
      <nav>
+
         <div class="nav-wrapper  light-green darken-4 ">
           <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
           <ul id="inicio_ul" class="left hide-on-med-and-down">
@@ -30,14 +50,34 @@
           </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down ">
               <li><a href=" {% url 'nosotros' %}">NOSOTROS</a></li>
-              <li><a href="">CAMPOS DE ACCIÓN</a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown2">
+                      CAMPOS DE ACCIÓN<i class="material-icons right">
+                      arrow_drop_down</i>
+              </a></li>
+
+              <ul id="dropdown2" class="dropdown-content light-green darken-2 ">
+                  <li><a href="{% url 'innova' %}" class ="white-text">INNOVACIONES</a></li>
+                  <li><a href="{% url 'libros' %}" class ="white-text">LIBROS</a></li>
+                  <li><a href="{% url 'revistas' %}" class ="white-text">REVISTAS</a></li>
+                  <li class="divider"></li>
+                 <li ><a href="{% url 'establos' %}" class ="white-text">ESTABLOS LECHEROS</a></li>
+                 <li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li>
+                 <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
+                 <li><a href="{% url 'alimento' %}" class ="white-text">ALIMENTO</a></li>
+                 <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
+                 <li><a href="{% url 'carne' %}" class ="white-text">GANADO DE CARNE</a></li>
+                 <li><a href="{% url 'fertilizantes' %}" class ="white-text">FERTILIZANTES NATURALES</a></li>
+                 <li class="divider"></li>
+                 <li><a href="{% url 'lotes' %}" class ="white-text">LOTES DE TERRENO</a></li>
+                 <li><a href="{% url 'cultivo' %}" class ="white-text">AREAS DE CULTIVO</a></li>
+               </ul>
               <li><a href="">SERVICIOS</a></li>
               <li><a href="">PRODUCTOS</a></li>
               <li><a href="  {% url 'contacto' %}">CONTACTO</a></li>
             </ul>
             <ul class="side-nav light-green darken-3" id="mobile-demo">
               <li class=" white-text"><a class="white-text" href="{% url 'nosotros' %}">NOSOTROS</a></li>
-              <li><a class="white-text" href="">CAMPOS DE ACCIÓN</a></li>
+              <li><a class="white-text dropdown-button" href="#!" data-activates="dropdown1">CAMPOS DE ACCIÓN <i class="material-icons right">arrow_drop_down</i></a></li>
               <li><a class="white-text" href="">SERVICIOS</a></li>
               <li><a class="white-text" href="">PRODUCTOS</a></li>
               <li><a class=" white-text " href=" {% url 'contacto' %}">CONTACTO</a></li>
@@ -65,11 +105,14 @@
      <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
      <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
      <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+     <script type="text/javascript" src="{% static 'js/jquery.elevatezoom.js' %}"></script>
 
      <script>
       $(document).ready(function(){
+        $(".dropdown-button").dropdown();
           $('.slider').slider({full_width: true, indicators:false});
           $('select').material_select();
+        $("#premezcla1").elevateZoom();
       });
 
       jQuery(function($) {

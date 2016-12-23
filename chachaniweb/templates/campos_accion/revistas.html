@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="row">
+  <div style="margin-top:1em;"class="col s12 m8 push-m2">
+
+    <div class="card horizontal large ">
+      <div class="card-image">
+        <img src="{% static 'img/img_campos/revista1.png' %}">
+      </div>
+      <div class="card-stacked">
+
+        <div class="card-content">
+          <div>
+          <p style="text-align:center;">El boletín KONTACTO CHACHANI es editado en su totalidad
+            por el equipo profesional de la empresa CHACHANI SAC.
+          </p><br>
+          <p style="text-align:center;">Edición I - Enero del 2017 - 12,000 ejemplares
+          </p><br>
+          <p style="text-align:center;"><i class="tiny material-icons">done_all</i>Transmite las nuevas técnicas
+              y productos que se utlizan en los establos de Chachani.</p>
+          <p style="text-align:center;"><i class="tiny material-icons">done_all</i>Busca ayudar a
+                los ganaderos a lograr la eficiencia que requieren los establos.
+          </p>
+          <p style="text-align:center;"><i class="tiny material-icons">done_all</i>Busca ser una vía de
+              comunicación y de cooperación entre nuestro establo y
+              los ganaderos proveedores de la leche del <b>GRUPO GLORIA</b>.
+          </p>
+          <p style="text-align:center;" ><i class="tiny material-icons">done_all</i>Promueve la aplicación
+              de la innovación, investigación y eficiencia en las empresas.
+          </p>
+</div>
+        </div>
+
+<!--        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock content%}
