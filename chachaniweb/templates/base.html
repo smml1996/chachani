@@ -12,6 +12,8 @@
      <link rel="stylesheet" href="{% static 'css/style.css' %}">
      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
      <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"  media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="{% static 'css/carne.css' %}"  media="screen,projection"/>
+
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    </head>
@@ -109,10 +111,16 @@
 
      <script>
       $(document).ready(function(){
-        $(".dropdown-button").dropdown();
+
+        $('.carousel').carousel({dist:-300,});
+        window.setInterval(function(){$('.carousel').carousel('next')},5000);
+          $(".dropdown-button").dropdown({inDuration: 300,
+              outDuration: 225, constrain_width: false, hover: false,
+              gutter: 0, belowOrigin: false, alignment: 'left' }
+            );
           $('.slider').slider({full_width: true, indicators:false});
           $('select').material_select();
-        $("#premezcla1").elevateZoom();
+
       });
 
       jQuery(function($) {

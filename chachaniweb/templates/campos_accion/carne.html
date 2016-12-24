@@ -2,4 +2,40 @@
 {% load staticfiles %}
 {% block content %}
 
+<div class="row" style="margin-top:3em;">
+  <div style="margin-top:10em;" class="carousel col s12 m6 l6">
+      <a class="carousel-item" href="#one!"><img src="{% static 'img/img_campos/carne/foto1.png' %}"></a>
+      <a class="carousel-item" href="#two!"><img src="{% static 'img/img_campos/carne/foto5.png' %}"></a>
+      <a class="carousel-item" href="#three!"><img src="{% static 'img/img_campos/carne/foto3.png' %}"></a>
+      <a class="carousel-item" href="#four!"><img src="{% static 'img/img_campos/carne/foto4.png' %}"></a>
+    </div>
+    <div style="margin-top:3em;" class="col s12 m5 l5 ">
+      <div class="card  light-green darken-2">
+        <div class="card-content white-text">
+          <p style="text-align:center;">El ganado de carne de Chachani esta
+            conformado por toros seleccionados Holstein cuidadosamente
+            alimentados y cuidados sanitariamente durante su periodo de
+            desarrollo para asegurarnos un producto de primera calidad.
+          </p><br>
+          <p style="text-align:center;">Chachani SAC, ha implementado corrales
+            especialmente acondicionados para asegurar el comfort y buen
+            desarrollo de sus toros.
+          </p><br>
+          <p style="text-align:center;"><b>EL GANADO DE CARNE DE CHACHANI </b>
+            sera ofrecido a los 2 años de edad de los toros.
+            Tiempo en el cual la carne llega a su punto de calidad máxima
+            en cuanto a su textura y sabor.
+          </p><br>
+          <p style="text-align:center;">la <b>CARNE SELECCIONADA DE CHACHANI
+          </b> tendrá la garantía de ser una carne de ganado
+              cuidadosamente criados por:
+          </p>
+          <div style="margin-top:1em;" class="row center">
+            <img  src="{% static 'img/logo2.png' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 {% endblock content%}
