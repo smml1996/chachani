@@ -52,7 +52,7 @@
           </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down ">
               <li><a href=" {% url 'nosotros' %}">NOSOTROS</a></li>
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown2">
+              <li><a id="mobile-dropdown-button" class="dropdown-button" href="#!" data-activates="dropdown2">
                       CAMPOS DE ACCIÓN<i class="material-icons right">
                       arrow_drop_down</i>
               </a></li>
@@ -115,9 +115,10 @@
         $('.carousel').carousel({dist:-300,});
         window.setInterval(function(){$('.carousel').carousel('next')},5000);
           $(".dropdown-button").dropdown({inDuration: 300,
-              outDuration: 225, constrain_width: false, hover: false,
+              outDuration: 225, constrain_width: true, hover: true,
               gutter: 0, belowOrigin: false, alignment: 'left' }
             );
+           // $(".dropdown").dropdown('open');
           $('.slider').slider({full_width: true, indicators:false});
           $('select').material_select();
 
