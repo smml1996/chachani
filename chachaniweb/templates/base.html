@@ -111,6 +111,19 @@
 
      <script>
       $(document).ready(function(){
+        var options = [
+          {selector: '#image1', offset: 500,
+              callback: function(el) { Materialize.fadeInImage($(el)); } },
+          {selector: '#image5', offset: 0,
+                  callback: function(el) { Materialize.fadeInImage($(el)); } },
+          {selector: '#image2', offset: 300,
+              callback: function(el) { Materialize.fadeInImage($(el)); } },
+          {selector: '#image3', offset: 10,
+              callback: function(el) { Materialize.fadeInImage($(el)); } },
+          {selector: '#image4', offset: 20,
+              callback: function(el) { Materialize.fadeInImage($(el)); } },
+        ];
+          Materialize.scrollFire(options);
 
         $('.carousel').carousel({dist:-300,});
         window.setInterval(function(){$('.carousel').carousel('next')},5000);
