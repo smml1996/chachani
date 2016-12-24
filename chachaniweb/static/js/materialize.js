@@ -3360,6 +3360,9 @@ $(document).ready(function(){
         }
         options.find('li.selected').removeClass('selected');
       });
+      $('.select-dropdown').find('span').on('click',function(){
+			$newSelect.trigger('close');
+	   });
 
       options.hover(function() {
         optionsHover = true;
