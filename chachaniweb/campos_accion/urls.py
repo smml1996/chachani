@@ -15,4 +15,6 @@ urlpatterns = [
     url(r'^premezclas/', views.premezclas, name="premezclas"),
     url(r'^revistas/', views.revistas, name="revistas"),
     url(r'^tilapias/', views.tilapias, name="tilapias"),
+    url(r'^revista/', views.revista, name="revista"),
+
 ]

@@ -25,7 +25,7 @@
          <li><a href="{% url 'revistas' %}" class ="white-text">REVISTAS</a></li>
          <li class="divider"></li>
         <li ><a href="{% url 'establos' %}" class ="white-text">ESTABLOS LECHEROS</a></li>
-        <li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li>
+      <!--  <li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li> -->
         <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
         <li><a href="{% url 'alimento' %}" class ="white-text">ALIMENTO</a></li>
         <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
@@ -63,7 +63,7 @@
                   <li><a href="{% url 'revistas' %}" class ="white-text">REVISTAS</a></li>
                   <li class="divider"></li>
                  <li ><a href="{% url 'establos' %}" class ="white-text">ESTABLOS LECHEROS</a></li>
-                 <li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li>
+                 <!--<li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li> -->
                  <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
                  <li><a href="{% url 'alimento' %}" class ="white-text">ALIMENTO</a></li>
                  <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
@@ -86,7 +86,6 @@
             </ul>
         </div>
     </nav>
-
      {% block content %}
      {% endblock %}
    </div>
@@ -107,10 +106,11 @@
      <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
      <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
      <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
-     <script type="text/javascript" src="{% static 'js/jquery.elevatezoom.js' %}"></script>
+     
 
      <script>
       $(document).ready(function(){
+         $('.modal').modal();
         var options = [
           {selector: '#image1', offset: 500,
               callback: function(el) { Materialize.fadeInImage($(el)); } },
@@ -125,8 +125,9 @@
         ];
           Materialize.scrollFire(options);
 
-        $('.carousel').carousel({dist:-300,});
-        window.setInterval(function(){$('.carousel').carousel('next')},5000);
+        $('.libro').carousel({dist:-350,});
+        $('.carne').carousel({dist:-300,});
+        window.setInterval(function(){$('.carne').carousel('next')},5000);
           $(".dropdown-button").dropdown({inDuration: 300,
               outDuration: 225, constrain_width: true, hover: true,
               gutter: 0, belowOrigin: false, alignment: 'left' }
@@ -201,7 +202,6 @@
           $('select').material_select();
     });
 });
-
       </script>
    </body>
  </html>

@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<style>
+.pdfobject-container { height: 100vh;}
+.pdfobject { border: 1px solid #666; }
+</style>
+<div class="modal-content">
+    <div id="example1"></div>
+</div>
+<script type="text/javascript" src="{% static 'js/pdfobject.js' %}"></script>
+<script>PDFObject.embed("{% static 'pdf/kontacto_revista.pdf' %}", "#example1");</script>

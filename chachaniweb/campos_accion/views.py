@@ -60,3 +60,8 @@ def tilapias(request):
     template = loader.get_template('campos_accion/tilapias.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+def revista(request):
+    template = loader.get_template('campos_accion/revista.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
