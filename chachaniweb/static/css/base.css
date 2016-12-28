@@ -6,6 +6,17 @@
 #foto-chachani,#innovadores{
   margin-top:4.5rem;
 }
+#texto-cerdos{
+  margin:5em auto auto -3em !important;
+}
+#texto-productos-innova{
+  margin-top:-1em;
+}
+
+#img-inicial-innova{
+  margin-top:-2.1em;
+  height:70vh;
+}
 @media only screen and (max-width: 980px) {
     #logo {
         margin-left:auto;
@@ -14,6 +25,12 @@
     }
     #foto-chachani{
       margin-top:0px;
+    }
+    #texto-cerdos{
+      margin:0;
+    }
+    #texto-productos-innova{
+      margin-top:0;
     }
 }
 #inicio_ul{

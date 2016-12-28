@@ -135,6 +135,13 @@
            // $(".dropdown").dropdown('open');
           $('.slider').slider({full_width: true});
           $('select').material_select();
+          $('#arrow-right').click(function() {
+            $('.slider').slider('next');
+          });
+$('.slider').slider('pause');
+          $('#arrow-left').click(function() {
+            $('.slider').slider('prev');
+          });
 
       });
 

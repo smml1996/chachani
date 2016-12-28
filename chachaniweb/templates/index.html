@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<div>
-
-<div id ="mySlider" class="row">
+<div class="row valign-wrapper">
+<span class="col s1 valign">
+  <img id="arrow-left" style="height:70vh;opacity:0.5;" class="responsive-img" src="{% static 'img/arrow_left.svg' %}">
+</span>
+<div class="col s10 valign">
+<div id ="mySlider" >
   <!-- begin slider -->
   <div class="slider">
      <ul class="slides">
@@ -22,14 +25,14 @@
        <li>
          <img src="{% static 'img/Foto16.jpg' %}">
          <div class="caption left-align">
-           <h4 class="brown-text darken-4-text" style="text-transform:uppercase;margin:5em auto auto -3em;"><b>.. y cerdos de gran calidad ...</b></h4>
+           <h4 id="texto-cerdos" class="brown-text darken-4-text" style="text-transform:uppercase;"><b>.. y cerdos de gran calidad ...</b></h4>
          </div>
        </li>
 
-       <li>
-         <img src="{% static 'img/foto4.png' %}">
+       <li class="center">
+         <img id="img-inicial-innova" src="{% static 'img/foto4.png' %}">
          <div class="caption left-align">
-           <h4 class="black-text"style="text-transform:uppercase; margin-top:-1em;">.. Chachani también es productos
+           <h4 id="texto-productos-innova" class="black-text"style="text-transform:uppercase;">.. Chachani también es productos
               innovadores ...</h4>
          </div>
        </li>
@@ -43,12 +46,16 @@
        <li>
          <img src="{% static 'img/foto6.png' %}">
          <div class="caption right-align">
-           <h4 style="text-transform:uppercase;margin-top:7em;">... libros exclusivos... revistas... y muchas otras novedades más.</h4>
+           <h4 style="text-transform:uppercase;margin-top:7em;"><b>... libros exclusivos... revistas... y muchas otras novedades más. </b></h4>
          </div>
        </li>
      </ul>
     </div>
    </div>
    <!-- end slider -->
+ </div>
+ <span class="col s1 valign">
+   <img id="arrow-right" style="height:70vh;opacity:0.5;" class="responsive-img" src="{% static 'img/arrow_right.svg' %}">
+ </span>
  </div>
  {% endblock content %}
