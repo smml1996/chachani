@@ -25,15 +25,10 @@
          <li><a href="{% url 'revistas' %}" class ="white-text">REVISTAS</a></li>
          <li class="divider"></li>
         <li ><a href="{% url 'establos' %}" class ="white-text">ESTABLOS LECHEROS</a></li>
-      <!--  <li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li> -->
         <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
-        <li><a href="{% url 'alimento' %}" class ="white-text">ALIMENTO</a></li>
         <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
         <li><a href="{% url 'carne' %}" class ="white-text">GANADO DE CARNE</a></li>
         <li><a href="{% url 'fertilizantes' %}" class ="white-text">FERTILIZANTES NATURALES</a></li>
-        <li class="divider"></li>
-        <li><a href="{% url 'lotes' %}" class ="white-text">LOTES DE TERRENO</a></li>
-        <li><a href="{% url 'cultivo' %}" class ="white-text">AREAS DE CULTIVO</a></li>
       </ul>
      <div id="container">
     <div id="content">
@@ -63,25 +58,16 @@
                   <li><a href="{% url 'revistas' %}" class ="white-text">REVISTAS</a></li>
                   <li class="divider"></li>
                  <li ><a href="{% url 'establos' %}" class ="white-text">ESTABLOS LECHEROS</a></li>
-                 <!--<li><a href="{% url 'tilapias' %}" class ="white-text"> CRIANZA DE TILAPIAS</a></li> -->
                  <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
-                 <li><a href="{% url 'alimento' %}" class ="white-text">ALIMENTO</a></li>
                  <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
                  <li><a href="{% url 'carne' %}" class ="white-text">GANADO DE CARNE</a></li>
                  <li><a href="{% url 'fertilizantes' %}" class ="white-text">FERTILIZANTES NATURALES</a></li>
-                 <li class="divider"></li>
-                 <li><a href="{% url 'lotes' %}" class ="white-text">LOTES DE TERRENO</a></li>
-                 <li><a href="{% url 'cultivo' %}" class ="white-text">AREAS DE CULTIVO</a></li>
                </ul>
-              <li><a href="">SERVICIOS</a></li>
-              <li><a href="">PRODUCTOS</a></li>
               <li><a href="  {% url 'contacto' %}">CONTACTO</a></li>
             </ul>
             <ul class="side-nav light-green darken-3" id="mobile-demo">
               <li class=" white-text"><a class="white-text" href="{% url 'nosotros' %}">NOSOTROS</a></li>
               <li><a class="white-text dropdown-button" href="#!" data-activates="dropdown1">CAMPOS DE ACCIÓN <i class="material-icons right">arrow_drop_down</i></a></li>
-              <li><a class="white-text" href="">SERVICIOS</a></li>
-              <li><a class="white-text" href="">PRODUCTOS</a></li>
               <li><a class=" white-text " href=" {% url 'contacto' %}">CONTACTO</a></li>
             </ul>
         </div>
@@ -111,20 +97,6 @@
      <script>
       $(document).ready(function(){
          $('.modal').modal();
-        var options = [
-          {selector: '#image1', offset: 500,
-              callback: function(el) { Materialize.fadeInImage($(el)); } },
-          {selector: '#image5', offset: 0,
-                  callback: function(el) { Materialize.fadeInImage($(el)); } },
-          {selector: '#image2', offset: 300,
-              callback: function(el) { Materialize.fadeInImage($(el)); } },
-          {selector: '#image3', offset: 10,
-              callback: function(el) { Materialize.fadeInImage($(el)); } },
-          {selector: '#image4', offset: 20,
-              callback: function(el) { Materialize.fadeInImage($(el)); } },
-        ];
-          Materialize.scrollFire(options);
-
         $('.libro').carousel({dist:-350,});
         $('.carne').carousel({dist:-300,});
         window.setInterval(function(){$('.carne').carousel('next')},5000);

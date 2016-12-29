@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<div style ="margin-top:3em;" class="row">
+<div style ="margin-top:3em;" class="row valign-wrapper">
   <div class=" container col s12 m6 l6 center">
     <div style="margin-top: 6em;"class="col s8 push-s2">
-      <img class="responsive-img" src="{% static 'img/img_campos/fertilizantes/foto1.png' %}">
+      <img style ="max-height:90vh;" class="img-responsive center" src="{% static 'img/img_campos/fertilizantes/foto3.png' %}">
     </div>
   </div>
-  <div style="padding:3em 7em 0 0;"class="container col s12 m6 l6 center">
+  <div style="padding:3em 7em 0 0;"class="container col s12 m6 l6 center valign">
     <div class="row">
-      <h4 class="red-text"><b> EL COMPOST DE MÁS ALTA CALIDAD 100%
-            GUANO DE VACA COMO MATERIA ORGÁNICA</b></h4>
+      <h6 class="red-text"><b> EL COMPOST DE MÁS ALTA CALIDAD 100%
+            GUANO DE VACA COMO MATERIA ORGÁNICA</b></h6>
     </div>
     <div class="row">
-      <h4><b>KOMPUS SAC</b></h4>
+      <h6><b>KOMPUS SAC</b></h6>
       <p style="text-align:center;"><i class="tiny material-icons">
           done_all</i>MATERIA ORGÁNICA UTILIZADA 100% GUANO DE VACA
       </p>
@@ -35,21 +35,16 @@
   </div>
 </div>
 
-<div style ="margin-top:3em;" class="row">
-  <div class="row">
-    <div style="margin-top:25vh;" class="col s12 m6 l6 center">
-      <img class="img-responsive" src="{% static 'img/img_campos/fertilizantes/foto2.png' %}">
+<div style ="margin-top:3em;" class="row container">
+    <div class="col s12 m12 l12 center">
+      <img style="max-width:20vw;" class="img-responsive" src="{% static 'img/img_campos/fertilizantes/KOMPUSVACT.png' %}">
       <div  class="col s12">
         <h5><em>... Es un producto con la calidad de ...</em></h5>
       </div>
       <div  class="row">
-        <img class="img-responsive" src="{% static 'img/logo2.png' %}">
+        <img style="max-width:8vw;" class="img-responsive" src="{% static 'img/logo2.png' %}">
       </div>
     </div>
-    <div class="row">
-      <img style ="max-width:45vw;" class="img-responsive" src="{% static 'img/img_campos/fertilizantes/foto3.png' %}">
-    </div>
-  </div>
 
 </div>
 {% endblock content%}
