@@ -7,6 +7,12 @@
   #texto-cerdos{
     margin:0 auto auto -2em !important;
   }
+  #text_last_foto{
+    margin: 0;
+  }
+  img {
+    max-width: 100% !important;
+  }
 }
 @media only screen and (max-width: 980px) {
     #logo {
@@ -22,16 +28,21 @@
       margin:5.7em auto auto auto !important;
     }
     #texto-productos-innova{
-      margin-top:0;
+      margin-top:0; 
     }
     #foto2{
 
+    }
+    .slides li{
+      width: 100% !important;
     }
 }
 #inicio_ul{
   margin-left:5vw;
 }
-
+.carousel{
+  margin-left: 20px;
+}
 #mobile-demo{
   border-style:solid solid solid none;
   border-color: #33691e !important;
