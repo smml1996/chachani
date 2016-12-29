@@ -2,49 +2,49 @@
 {% load staticfiles %}
 {% block content %}
 <div class="row valign-wrapper">
-<span class="col s1 valign">
+<span class="col s2 m1 l1 valign">
   <img id="arrow-left" style="height:70vh;opacity:0.5;" class="responsive-img" src="{% static 'img/arrow_left.svg' %}">
 </span>
-<div class="col s10 valign">
+<div class="col s8 m10 l10 valign">
 <div id ="mySlider" >
   <!-- begin slider -->
   <div class="slider">
      <ul class="slides">
        <li>
-         <img src="{% static 'img/Foto12.jpg' %}">
+         <img class="responsive-img" src="{% static 'img/Foto12.jpg' %}">
          <div class="caption center-align">
            <h4 id="foto-chachani" style="text-transform:uppercase;" class ="gray-text">Chachani no es solo un hermoso volcán...</h4>
          </div>
        </li>
        <li>
-         <img src="{% static 'img/foto1.jpg' %}">
+         <img class="responsive-img" src="{% static 'img/foto1.jpg' %}">
          <div class="caption right-align">
-           <h3 style="text-transform:uppercase">Chachani también significa establos lideres en productividad......</h3>
+           <h3 id="foto2" style="text-transform:uppercase"><b>Chachani también significa establos lideres en productividad......</b></h3>
          </div>
        </li>
        <li>
-         <img src="{% static 'img/Foto16.jpg' %}">
+         <img class="responsive-img" src="{% static 'img/Foto16.jpg' %}">
          <div class="caption left-align">
-           <h4 id="texto-cerdos" class="brown-text darken-4-text" style="text-transform:uppercase;"><b>.. y cerdos de gran calidad ...</b></h4>
+           <h4 id="texto-cerdos"  style="text-transform:uppercase;"><b>.. y cerdos de gran calidad ...</b></h4>
          </div>
        </li>
 
        <li class="center">
-         <img id="img-inicial-innova" src="{% static 'img/foto4.png' %}">
+         <img id="img-inicial-innova" class="responsive-img" src="{% static 'img/foto4.png' %}">
          <div class="caption left-align">
-           <h4 id="texto-productos-innova" class="black-text"style="text-transform:uppercase;">.. Chachani también es productos
-              innovadores ...</h4>
+           <h4 id="texto-productos-innova" class="black-text"style="text-transform:uppercase;"><b>.. Chachani también es productos
+              innovadores ...</b></h4>
          </div>
        </li>
        <li>
-         <img src="{% static 'img/foto5.png' %}">
+         <img class="responsive-img" src="{% static 'img/foto5.png' %}">
          <div class="caption left-align">
            <h4 class="black-text" style="text-transform:uppercase">.. también invención,
-             creatividad ...</h4>
+             creatividad</h4>
          </div>
        </li>
        <li>
-         <img src="{% static 'img/foto6.png' %}">
+         <img class="responsive-img" src="{% static 'img/foto6.png' %}">
          <div class="caption right-align">
            <h4 style="text-transform:uppercase;margin-top:7em;"><b>... libros exclusivos... revistas... y muchas otras novedades más. </b></h4>
          </div>
@@ -54,7 +54,7 @@
    </div>
    <!-- end slider -->
  </div>
- <span class="col s1 valign">
+ <span class="col s2 m1 l1 valign">
    <img id="arrow-right" style="height:70vh;opacity:0.5;" class="responsive-img" src="{% static 'img/arrow_right.svg' %}">
  </span>
  </div>

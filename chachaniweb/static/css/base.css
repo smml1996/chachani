@@ -1,21 +1,12 @@
-#logo{
-  max-height: 25vh;
-  margin-left: 3vw;
-  margin-top: 0.5em;
-}
-#foto-chachani,#innovadores{
-  margin-top:4.5rem;
-}
-#texto-cerdos{
-  margin:5em auto auto -3em !important;
-}
-#texto-productos-innova{
-  margin-top:-1em;
-}
 
-#img-inicial-innova{
-  margin-top:-2.1em;
-  height:70vh;
+@media only screen and (max-width: 1024px){
+  #foto-chachani{
+    margin-top:5em !important;
+    font-size:2em;
+  }
+  #texto-cerdos{
+    margin:0 auto auto -2em !important;
+  }
 }
 @media only screen and (max-width: 980px) {
     #logo {
@@ -24,13 +15,17 @@
         display:block;
     }
     #foto-chachani{
-      margin-top:0px;
+      margin-top:4em;
+      font-size:2em;
     }
     #texto-cerdos{
-      margin:0;
+      margin:5.7em auto auto auto !important;
     }
     #texto-productos-innova{
       margin-top:0;
+    }
+    #foto2{
+
     }
 }
 #inicio_ul{
@@ -70,4 +65,24 @@ padding-bottom:3em;
 
   margin: 0px auto;
     margin-top: 10px;
+}
+
+#logo{
+  max-height: 25vh;
+  margin-left: 3vw;
+  margin-top: 0.5em;
+}
+#foto-chachani,#innovadores{
+  margin-top:4.5rem;
+}
+#texto-cerdos{
+  margin:5em auto auto -3em;
+}
+#texto-productos-innova{
+  margin-top:-1em;
+}
+
+#img-inicial-innova{
+  margin-top:-2.1em;
+  height:70vh;
 }
