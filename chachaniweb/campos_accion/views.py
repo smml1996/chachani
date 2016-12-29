@@ -27,7 +27,7 @@ def innova(request):
     return HttpResponse(template.render(context, request))
 
 def libros(request):
-    template = loader.get_template('campos_accion/libros.html')
+    template = loader.get_template('campos_accion/libro2.html')
     context = {}
     return HttpResponse(template.render(context, request))
 
