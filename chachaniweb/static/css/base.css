@@ -28,13 +28,24 @@
       margin:5.7em auto auto auto !important;
     }
     #texto-productos-innova{
-      margin-top:0; 
+      margin-top:0;
+    }
+    #texto-productos-innova b{
+      background: rgba(255, 255, 255, 0.5);
     }
     #foto2{
-
+      font-size: x-large !important;
     }
     .slides li{
       width: 100% !important;
+    }
+    #text_last_foto{
+      font-size: x-large !important;
+      color: black !important;
+    }
+
+    #text_last_foto b{
+      background: rgba(255, 255, 255, 0.5);
     }
 }
 #inicio_ul{
