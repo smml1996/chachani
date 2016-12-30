@@ -26,7 +26,7 @@ SECRET_KEY = '!3m=1o^$1_q1!70b9_ny-q-avl%jd#k6x)=8brkoc+n(v4%9vh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'localhost',]
+ALLOWED_HOSTS = [u'localhost', u'127.0.0.1',]
 
 # Application definition
 
@@ -75,19 +75,19 @@ WSGI_APPLICATION = 'chachaniweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'ENGINE': 'django.db.backends.mysql', 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.mysql',
         #'OPTIONS':{
         #    'read_default_file': os.path.join(BASE_DIR, 'my.cnf'),
         #}
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'prueba',
-        'USER': 'root',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'prueba',
+        #'USER': 'root',
+        #'PASSWORD': 'root',
+        #'HOST': 'localhost',
+        #'PORT': '3306',
+
     }
 }
 

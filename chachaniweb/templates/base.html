@@ -92,12 +92,10 @@
      <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
      <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
      <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
-
-
      <script>
       $(document).ready(function(){
-         $('.modal').modal();
-        $('.libro').carousel();
+        $('.modal').modal();
+        $('.carousel').carousel({dist: -100});
         $('.carne').carousel({dist:-300,});
         window.setInterval(function(){$('.carne').carousel('next')},5000);
           $(".dropdown-button").dropdown({inDuration: 300,
@@ -105,12 +103,12 @@
               gutter: 0, belowOrigin: false, alignment: 'left' }
             );
            // $(".dropdown").dropdown('open');
-          $('.slider').slider({full_width: true});
+          $('.slider').slider();
           $('select').material_select();
           $('#arrow-right').click(function() {
             $('.slider').slider('next');
           });
-$('.slider').slider('pause');
+          $('.slider').slider('pause');
           $('#arrow-left').click(function() {
             $('.slider').slider('prev');
           });
