@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     url(r'^carne/', views.carne, name="carne"),
+    url(r'^cerdos/', views.cerdos, name="cerdos"),
     url(r'^establos/', views.establos, name="establos"),
     url(r'^fertilizantes/', views.fertiliza, name="fertilizantes"),
     url(r'^forraje/', views.forraje, name="forraje"),

@@ -6,6 +6,11 @@ def carne(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
+def cerdos(request):
+    template = loader.get_template('campos_accion/cerdos.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
 def establos(request):
     template = loader.get_template('campos_accion/establos.html')
     context = {}

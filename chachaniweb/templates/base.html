@@ -28,6 +28,7 @@
         <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
         <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
         <li><a href="{% url 'carne' %}" class ="white-text">GANADO DE CARNE</a></li>
+        <li><a href="{% url 'cerdos' %}" class ="white-text">CERDOS</a></li>
         <li><a href="{% url 'fertilizantes' %}" class ="white-text">FERTILIZANTES NATURALES</a></li>
       </ul>
      <div id="container">
@@ -61,6 +62,7 @@
                  <li><a href="{% url 'forraje' %}" class ="white-text">FORRAJES DE GANADO</a></li>
                  <li><a href="{% url 'premezclas' %}" class ="white-text">PREMEZCLAS</a></li>
                  <li><a href="{% url 'carne' %}" class ="white-text">GANADO DE CARNE</a></li>
+                 <li><a href="{% url 'cerdos' %}" class ="white-text">CERDOS</a></li>
                  <li><a href="{% url 'fertilizantes' %}" class ="white-text">FERTILIZANTES NATURALES</a></li>
                </ul>
               <li><a href="  {% url 'contacto' %}">CONTACTO</a></li>
@@ -117,55 +119,55 @@
 
       jQuery(function($) {
     var locations = {
-        'am': ['Bagua', 'Bongará','Chachapoyas', 'Condorcanqui','Luya',
+        'amazonas': ['Bagua', 'Bongará','Chachapoyas', 'Condorcanqui','Luya',
                 'Rodríguez de Mendoza','Utcubamba'],
-        'an': ['Aija','Antonio Raymondi','Asunción','Bolognesi',
+        'ancash': ['Aija','Antonio Raymondi','Asunción','Bolognesi',
                 'Carhuaz','Carlos F. Fitzcarrald','Casma','Corongo','Huaraz',
                 'Huari','Huarmey','Huaylas','Marizcal Luzuriaga','Ocros',
                 'Pallasca','Pomapampa','Recuay','Santa','Sihuas','Yungay'],
-        'ap': ['Abancay','Andahuaylas','Chincheros','Antabamba',
+        'apurimac': ['Abancay','Andahuaylas','Chincheros','Antabamba',
               'Aymaraes','Cotabambas','Grau'],
-        'ar': ['Arequipa','Camaná','Caraveli','Castilla','Caylloma',
+        'arequipa': ['Arequipa','Camaná','Caraveli','Castilla','Caylloma',
                 'Condesuyos','Islay','La Unión'],
-        'ay': ['Huamanga','Cangallo','Huanca Sancos','Huanta','La Mar',
+        'ayacucho': ['Huamanga','Cangallo','Huanca Sancos','Huanta','La Mar',
                 'Lucanas','Parinacochas','Paúcar del Sara Sara','Sucre',
                 'Victor Fajardo','Vilcas Huamán'],
-        'caj': ['San Ignacio','Jaen','Cutervo','Chota','Santa Cruz','Hualgayoc',
+        'cajamarca': ['San Ignacio','Jaen','Cutervo','Chota','Santa Cruz','Hualgayoc',
                 'Celendin','San Pablo','San Miguel','Contumaza','Cajamarca',
                 'Cajabamba','San Marcos'],
-        'cal': [''],
-        'cus': ['Acomayo','Anta','Calca','Canas','Canchis','Chumbivilcas',
+        'callao': [''],
+        'cusco': ['Acomayo','Anta','Calca','Canas','Canchis','Chumbivilcas',
                 'Cusco','Espinar','La Convención','Paruro', 'Paucartambo',
                 'Quispicanchis','Urubamba'
                 ],
-        'huanc': ['Tayacaja', 'Acobamba', 'Huaytará', 'Angaraes', 'Churcampa',
+        'huancavelica': ['Tayacaja', 'Acobamba', 'Huaytará', 'Angaraes', 'Churcampa',
                   'Castrovirreyna'],
-        'hua': ['Huanuco','Ambo','Dos de Mayo','Huaycabamba','Huamalies',
+        'huanuco': ['Huanuco','Ambo','Dos de Mayo','Huaycabamba','Huamalies',
                 'Leoncio Prado','Marañon','Pachitea','Puerto Inca','Lauricocha',
                 'Yarowillca'],
         'ica': ['Ica','Chincha','Nazca','Palpa','Pisco'],
-        'jun': ['Junín','Yauli','Jauja','Tarma','Chanchamayo','Concepción',
+        'junin': ['Junín','Yauli','Jauja','Tarma','Chanchamayo','Concepción',
                 'Chupaca','Huancayo','Satipo'],
-        'lib': ['Chepen','Pacasmayo','Ascope','Otuzco','Trujillo','Julcan',
+        'libertad': ['Chepen','Pacasmayo','Ascope','Otuzco','Trujillo','Julcan',
                 'Santiago de Chuco','Sanchez Carrión','Bolivar','Pataz'],
-        'lam': ['Lambayeque','Ferreñafe','Chiclayo'],
-        'lim':['Barranca','Lima','Cajatambo','Oyon','Huaura','Huaral','Canta',
+        'lambayeque': ['Lambayeque','Ferreñafe','Chiclayo'],
+        'lima':['Barranca','Lima','Cajatambo','Oyon','Huaura','Huaral','Canta',
                 'Huarochiri','Yauyos','Cañete'],
-        'lo': ['Maynas','Loreto','Ramón Castilla','Requena','Alto Amazonas',
+        'loreto': ['Maynas','Loreto','Ramón Castilla','Requena','Alto Amazonas',
                 'Datem del Marañón','Ucayali'],
-        'ma': ['Tahuamanu','Tambopata','Manu'],
-        'mo': ['General Sanchez Cerro','Mariscal Nieto','Ilo'],
-        'pa': ['Daniel A. Carrión', 'Oxampampa', 'Pasco'],
-        'pi': ['Talara','Paita','Sechura','Piura','Suliana','Morropón',
+        'madre de dios': ['Tahuamanu','Tambopata','Manu'],
+        'moquegua': ['General Sanchez Cerro','Mariscal Nieto','Ilo'],
+        'pasco': ['Daniel A. Carrión', 'Oxampampa', 'Pasco'],
+        'piura': ['Talara','Paita','Sechura','Piura','Suliana','Morropón',
               'Ayabaca','Huancabamba'],
-        'pu': ['Carabaya','Sandia','Melgar','Lampa','Azangaro',
+        'puno': ['Carabaya','Sandia','Melgar','Lampa','Azangaro',
                 'San Antonio de Putina','Huancané','Moho','El Collao','Puno',
                 'San Román','Chuquito','Yunguyo'],
-        'san': ['Moyobamba','Rioja','Lamas','San Martín','El Dorado','Picota',
+        'san martin': ['Moyobamba','Rioja','Lamas','San Martín','El Dorado','Picota',
                 'Bellavista','Huallaga','Mariscal Caceres','Tocache'],
-        'tac': ['Candarave','Tacna','Tarata','Jorge Basadre'],
-        'tum': ['tumbes','Contralmirante Villar','Zarumilla'],
-        'uc': ['Padre Abad','Coronel Portillo','Atalaya','Purus'],
+        'tacna': ['Candarave','Tacna','Tarata','Jorge Basadre'],
+        'tumbes': ['tumbes','Contralmirante Villar','Zarumilla'],
+        'ucayali': ['Padre Abad','Coronel Portillo','Atalaya','Purus'],
     }
 
     var $provincia = $('#provincia');

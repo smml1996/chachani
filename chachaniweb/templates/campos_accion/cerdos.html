@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div style="margin-top:3em;" class="row valign-wrapper">
+  <div class="col s12 m6 l6 center">
+    <img style="max-width:40vw;" src="{% static 'img/img_campos/cerdos/CERDO1.png' %}" >
+  </div>
+  <div  style="padding-right:2em;"class="col s12 m5 l5 valign">
+  <div style="font-size:medium;" class="row center center">
+    <p><b> Los cerdos ofrecen una calidad de carne inversamente proporcional al estrés en el que viven.</b> </p>
+    <p><b>Chachani por ello no cría cerdos...</b></p>
+    <p><b>Chachani engríe cerdos.</b></p>
+  </div>
+  <div class="row center">
+    <img style="max-height: 10vh;" class="responsive-img"  src="{% static 'img/logo_hoja.png' %}">
+  </div>
+  </div>
+</div>
+
+<div style="margin-top:6em;" class="row valign-wrapper">
+  <div class="col s12 m5 l5 valign">
+  <div  style="padding-left:2em;font-size:medium;"  class="row center center">
+    <p><b> La granja de Cerdos Chachani situada en Trujillo posee una capacidad para albergar 1500 cerdas madres
+      (15 000 animales en proceso) y se piensa multiplicar esta capacidad de orto plazo.
+
+    </b> </p>
+    <p><b>Actualmente, se ha iniciado el proceso de inseminación a nuestras primeras chanchas.</b></p>
+
+  </div>
+  </div>
+  <div class="col s12 m6 l6 center">
+    <img style="max-width:40vw;" src="{% static 'img/img_campos/cerdos/CERDOS2.png' %}" >
+  </div>
+</div>
+
+<div style="margin-top:6em;" class="row center">
+  <img class="responsive-img" src="{% static 'img/img_campos/cerdos/CERDO3.png' %}">
+</div>
+{% endblock content %}
