@@ -13,6 +13,11 @@ def index(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
+def doctrina(request):
+    template = loader.get_template('doctrina.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
 def nosotros(request):
     template = loader.get_template('nosotros.html')
     context = {}
